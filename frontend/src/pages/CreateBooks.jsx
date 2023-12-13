@@ -12,11 +12,16 @@ const CreateBooks = () => {
   const navigate = useNavigate();
 
   const handleSaveBook = () => {
+
+    console.log(title, "just title");
+    console.log({ title }, 'object title')
+
     const data = {
       title,
       author,
       publishYear,
     };
+
     setLoading(true);
     axios
       .post('http://localhost:5555/books', data)
